@@ -1,5 +1,4 @@
-
---usersテーブルの作成
+-- usersテーブルの作成
 CREATE TABLE `users` (
     `id` INT(11) PRIMARY KEY AUTO_INCREMENT,
     `mail_address` VARCHAR(100) NOT NULL,
@@ -13,7 +12,7 @@ CREATE TABLE `users` (
     `modified_at` DATETIME NOT NULL
 );
 
---chatsテーブルの作成
+-- chatsテーブルの作成
 CREATE TABLE `chats` (
     `id` INT(11) PRIMARY KEY AUTO_INCREMENT,
     `name` VARCHAR(100) NOT NULL,
@@ -27,7 +26,7 @@ CREATE TABLE `chats` (
     `modified_by` INT(11) REFERENCES users(id)
 );
 
---postsテーブルの作成
+-- postsテーブルの作成
 CREATE TABLE `posts` (
     `id` INT(11) PRIMARY KEY AUTO_INCREMENT,
     `post` VARCHAR(1000) NOT NULL,
@@ -40,7 +39,7 @@ CREATE TABLE `posts` (
     `modified_by` INT(11) REFERENCES users(id)
 );
 
---tasksテーブルの作成
+-- tasksテーブルの作成
 CREATE TABLE `tasks` (
     `id` INT(11) PRIMARY KEY AUTO_INCREMENT,
     `task` VARCHAR(1000) NOT NULL,
@@ -55,7 +54,7 @@ CREATE TABLE `tasks` (
     `modified_by` INT(11) REFERENCES users(id)
     );
 
---joinsテーブルの作成
+-- joinsテーブルの作成
 CREATE TABLE `joins` (
     `chat_id` INT(11) REFERENCES chats(id),
     `user_id` INT(11) REFERENCES users(id),
