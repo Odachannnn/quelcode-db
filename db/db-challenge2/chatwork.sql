@@ -22,9 +22,9 @@ CREATE TABLE `chats` (
     `is_direct_chat` TINYINT(1) DEFAULT 0 NOT NULL,
     `is_deleted` TINYINT(1) DEFAULT 0 NOT NULL,
     `created_at` DATETIME NOT NULL,
-    `created_by` INT(11) REFERENCES users(id) NOT NULL,
+    `created_by` INT(11) REFERENCES users(id),
     `modified_at` DATETIME NOT NULL,
-    `modified_by` INT(11) REFERENCES users(id) NOT NULL
+    `modified_by` INT(11) REFERENCES users(id)
 );
 
 --postsテーブルの作成
@@ -35,9 +35,9 @@ CREATE TABLE `posts` (
     `chat_id` INT(11) REFERENCES chats(id),
     `is_deleted` TINYINT(1) DEFAULT 0 NOT NULL,
     `posted_at` DATETIME NOT NULL,
-    `posted_by` INT(11) REFERENCES users(id) NOT NULL,
+    `posted_by` INT(11) REFERENCES users(id),
     `modified_at` DATETIME NOT NULL,
-    `modified_by` INT(11) REFERENCES users(id) NOT NULL
+    `modified_by` INT(11) REFERENCES users(id)
 );
 
 --tasksテーブルの作成
@@ -50,9 +50,9 @@ CREATE TABLE `tasks` (
     `is_deleted` TINYINT(1) DEFAULT 0 NOT NULL,
     `chat_id` INT(11) REFERENCES chats(id),
     `created_at` DATETIME NOT NULL,
-    `created_by` INT(11) REFERENCES users(id) NOT NULL,
+    `created_by` INT(11) REFERENCES users(id),
     `modified_at` DATETIME NOT NULL,
-    `modified_by` INT(11) REFERENCES users(id) NOT NULL
+    `modified_by` INT(11) REFERENCES users(id)
     );
 
 --joinsテーブルの作成
