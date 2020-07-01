@@ -29,7 +29,7 @@ CREATE TABLE `chats` (
 -- postsテーブルの作成
 CREATE TABLE `posts` (
     `id` INT(11) PRIMARY KEY AUTO_INCREMENT,
-    `post` VARCHAR(1000) NOT NULL,
+    `message` VARCHAR(1000) NOT NULL,
     `file_name` VARCHAR(100),
     `chat_id` INT(11) REFERENCES chats(id),
     `is_deleted` TINYINT(1) DEFAULT 0 NOT NULL,
