@@ -5,8 +5,8 @@ CREATE TABLE `users` (
     `password` VARCHAR(100) NOT NULL,
     `name` VARCHAR(100) NOT NULL,
     `introduction` VARCHAR(1000),
-    `phone_number` CHAR(13),
-    `business_number` CHAR(13),
+    `phone_number` VARCHAR(13),
+    `business_number` VARCHAR(13),
     `is_deleted` TINYINT(1) DEFAULT 0 NOT NULL,
     `created_at` DATETIME NOT NULL,
     `modified_at` DATETIME NOT NULL
