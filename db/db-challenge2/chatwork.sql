@@ -17,7 +17,7 @@ CREATE TABLE `chats` (
     `id` INT(11) PRIMARY KEY AUTO_INCREMENT,
     `name` VARCHAR(100) NOT NULL,
     `outline` VARCHAR(1000),
-    `is_file_permitted` TINYINT(1) DEFAULT 0 NOT NULL,
+    `is_file_permittable` TINYINT(1) DEFAULT 0 NOT NULL,
     `is_direct_chat` TINYINT(1) DEFAULT 0 NOT NULL,
     `is_deleted` TINYINT(1) DEFAULT 0 NOT NULL,
     `created_at` DATETIME NOT NULL,
