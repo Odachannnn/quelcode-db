@@ -6,5 +6,5 @@ END AS ファイル送信可否,
 is_direct_chat, is_deleted, created_at, created_by, modified_at, modified_by
 FROM chats
 WHERE is_deleted = 0
-AND is_direct_chat = 1
+AND RIGHT(outline, 9) = 'ダイレクトチャット'
 ORDER BY id;
