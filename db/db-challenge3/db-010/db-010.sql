@@ -5,6 +5,6 @@ ON p.posted_by = u.id
 JOIN chats c
 ON p.chat_id = c.id
 WHERE u.is_deleted = 0
-AND c.is_deleted = 0
+AND p.is_deleted = 0
 GROUP BY c.id
 ORDER BY c.id;
